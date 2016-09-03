@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+﻿using Autofac;
 using Microsoft.Xna.Framework;
 
 namespace Ouroboros.Windows
@@ -7,9 +7,17 @@ namespace Ouroboros.Windows
     {
         public static void Main()
         {
-            using (var ouroborosGame = new OuroborosGame())
-            using (new GraphicsDeviceManager(ouroborosGame))
-                ouroborosGame.Run();
+            var containerBuilder = new ContainerBuilder();
+
+            containerBuilder.RegisterType<GraphicsDeviceManager>().SingleInstance().AutoActivate();
+            containerBuilder.RegisterType<OuroborosGame>().As<Game>().SingleInstance();
+            containerBuilder.Register(c => c.Resolve<Game>().Content).SingleInstance();
+            containerBuilder.Register(c => c.Resolve<Game>().GraphicsDevice).SingleInstance();
+
+            using (var container = containerBuilder.Build())
+            {
+                container.Resolve<Game>().Run();
+            }
         }
     }
 }
