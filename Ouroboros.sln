@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6A80FAE0-CB53-4690-99F5-2202857B7D12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{062533E1-37D7-4D68-8867-BC4C9B32AC48}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ouroboros.Windows", "src\Ouroboros.Windows\Ouroboros.Windows.csproj", "{B1089DFA-1FF3-4EC9-9BD4-6734481F8E2A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1089DFA-1FF3-4EC9-9BD4-6734481F8E2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1089DFA-1FF3-4EC9-9BD4-6734481F8E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1089DFA-1FF3-4EC9-9BD4-6734481F8E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1089DFA-1FF3-4EC9-9BD4-6734481F8E2A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B1089DFA-1FF3-4EC9-9BD4-6734481F8E2A} = {6A80FAE0-CB53-4690-99F5-2202857B7D12}
+	EndGlobalSection
+EndGlobal
