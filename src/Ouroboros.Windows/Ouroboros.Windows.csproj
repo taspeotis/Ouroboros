@@ -38,11 +38,53 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Content Include="Assets\Fonts\KenVectorFuture12.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\KenVectorFuture18.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\KenVectorFutureThin12.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\KenVectorFutureThin18.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Models\Large_Oak_Dark_01.mtl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Models\Large_Oak_Dark_01.obj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Models\Plate_Grass_01.mtl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Models\Plate_Grass_01.obj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Models\Plate_River_01.mtl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Models\Plate_River_01.obj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets.cs" />
+    <Compile Include="Attributes\RegisterScopedAttribute.cs" />
+    <Compile Include="Contracts\IRunLoop.cs" />
+    <Compile Include="Contracts\IModelService.cs" />
+    <Compile Include="Contracts\IScreen.cs" />
+    <Compile Include="Contracts\ITesselationService.cs" />
+    <Compile Include="Infrastructure\Constants.cs" />
     <Compile Include="OuroborosGame.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Services\RunLoop.cs" />
+    <Compile Include="Services\ModelService+ParsedDirectives.cs" />
+    <Compile Include="Services\ModelService.cs" />
+    <Compile Include="Services\TesselationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Autofac, Version=4.1.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
@@ -54,6 +96,83 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Assets\Sprites\UserInterface\barHorizontal_blue_left.png" />
+    <Content Include="Assets\Sprites\UserInterface\barHorizontal_blue_mid.png" />
+    <Content Include="Assets\Sprites\UserInterface\barHorizontal_blue_right.png" />
+    <Content Include="Assets\Sprites\UserInterface\barHorizontal_green_left.png" />
+    <Content Include="Assets\Sprites\UserInterface\barHorizontal_green_mid.png" />
+    <Content Include="Assets\Sprites\UserInterface\barHorizontal_green_right.png" />
+    <Content Include="Assets\Sprites\UserInterface\barHorizontal_red_left.png" />
+    <Content Include="Assets\Sprites\UserInterface\barHorizontal_red_mid.png" />
+    <Content Include="Assets\Sprites\UserInterface\barHorizontal_red_right.png" />
+    <Content Include="Assets\Sprites\UserInterface\barHorizontal_shadow_left.png" />
+    <Content Include="Assets\Sprites\UserInterface\barHorizontal_shadow_mid.png" />
+    <Content Include="Assets\Sprites\UserInterface\barHorizontal_shadow_right.png" />
+    <Content Include="Assets\Sprites\UserInterface\barHorizontal_white_left.png" />
+    <Content Include="Assets\Sprites\UserInterface\barHorizontal_white_mid.png" />
+    <Content Include="Assets\Sprites\UserInterface\barHorizontal_white_right.png" />
+    <Content Include="Assets\Sprites\UserInterface\barHorizontal_yellow_left.png" />
+    <Content Include="Assets\Sprites\UserInterface\barHorizontal_yellow_mid.png" />
+    <Content Include="Assets\Sprites\UserInterface\barHorizontal_yellow_right.png" />
+    <Content Include="Assets\Sprites\UserInterface\barVertical_blue_bottom.png" />
+    <Content Include="Assets\Sprites\UserInterface\barVertical_blue_mid.png" />
+    <Content Include="Assets\Sprites\UserInterface\barVertical_blue_top.png" />
+    <Content Include="Assets\Sprites\UserInterface\barVertical_green_bottom.png" />
+    <Content Include="Assets\Sprites\UserInterface\barVertical_green_mid.png" />
+    <Content Include="Assets\Sprites\UserInterface\barVertical_green_top.png" />
+    <Content Include="Assets\Sprites\UserInterface\barVertical_red_bottom.png" />
+    <Content Include="Assets\Sprites\UserInterface\barVertical_red_mid.png" />
+    <Content Include="Assets\Sprites\UserInterface\barVertical_red_top.png" />
+    <Content Include="Assets\Sprites\UserInterface\barVertical_shadow_bottom.png" />
+    <Content Include="Assets\Sprites\UserInterface\barVertical_shadow_mid.png" />
+    <Content Include="Assets\Sprites\UserInterface\barVertical_shadow_top.png" />
+    <Content Include="Assets\Sprites\UserInterface\barVertical_white_bottom.png" />
+    <Content Include="Assets\Sprites\UserInterface\barVertical_white_mid.png" />
+    <Content Include="Assets\Sprites\UserInterface\barVertical_white_top.png" />
+    <Content Include="Assets\Sprites\UserInterface\barVertical_yellow_bottom.png" />
+    <Content Include="Assets\Sprites\UserInterface\barVertical_yellow_mid.png" />
+    <Content Include="Assets\Sprites\UserInterface\barVertical_yellow_top.png" />
+    <Content Include="Assets\Sprites\UserInterface\crossair_black.png" />
+    <Content Include="Assets\Sprites\UserInterface\crossair_blackOutline.png" />
+    <Content Include="Assets\Sprites\UserInterface\crossair_blue.png" />
+    <Content Include="Assets\Sprites\UserInterface\crossair_blueOutline.png" />
+    <Content Include="Assets\Sprites\UserInterface\crossair_red.png" />
+    <Content Include="Assets\Sprites\UserInterface\crossair_redOutline.png" />
+    <Content Include="Assets\Sprites\UserInterface\crossair_white.png" />
+    <Content Include="Assets\Sprites\UserInterface\crossair_whiteOutline.png" />
+    <Content Include="Assets\Sprites\UserInterface\cursor_hand.png" />
+    <Content Include="Assets\Sprites\UserInterface\cursor_pointer3D.png" />
+    <Content Include="Assets\Sprites\UserInterface\cursor_pointer3D_shadow.png" />
+    <Content Include="Assets\Sprites\UserInterface\cursor_pointerFlat.png" />
+    <Content Include="Assets\Sprites\UserInterface\cursor_pointerFlat_shadow.png" />
+    <Content Include="Assets\Sprites\UserInterface\dotBlue.png" />
+    <Content Include="Assets\Sprites\UserInterface\dotGreen.png" />
+    <Content Include="Assets\Sprites\UserInterface\dotRed.png" />
+    <Content Include="Assets\Sprites\UserInterface\dotWhite.png" />
+    <Content Include="Assets\Sprites\UserInterface\dotYellow.png" />
+    <Content Include="Assets\Sprites\UserInterface\dot_shadow.png" />
+    <Content Include="Assets\Sprites\UserInterface\metalPanel.png" />
+    <Content Include="Assets\Sprites\UserInterface\metalPanel_blue.png" />
+    <Content Include="Assets\Sprites\UserInterface\metalPanel_blueCorner.png" />
+    <Content Include="Assets\Sprites\UserInterface\metalPanel_green.png" />
+    <Content Include="Assets\Sprites\UserInterface\metalPanel_greenCorner.png" />
+    <Content Include="Assets\Sprites\UserInterface\metalPanel_plate.png" />
+    <Content Include="Assets\Sprites\UserInterface\metalPanel_red.png" />
+    <Content Include="Assets\Sprites\UserInterface\metalPanel_redCorner.png" />
+    <Content Include="Assets\Sprites\UserInterface\metalPanel_yellow.png" />
+    <Content Include="Assets\Sprites\UserInterface\metalPanel_yellowCorner.png" />
+    <Content Include="Assets\Sprites\UserInterface\Panel\GlassPanel.png" />
+    <Content Include="Assets\Sprites\UserInterface\Panel\GlassPanelCorners.png" />
+    <Content Include="Assets\Sprites\UserInterface\Panel\GlassPanelTab.png" />
+    <Content Include="Assets\Sprites\UserInterface\squareBlue.png" />
+    <Content Include="Assets\Sprites\UserInterface\squareGreen.png" />
+    <Content Include="Assets\Sprites\UserInterface\squareRed.png" />
+    <Content Include="Assets\Sprites\UserInterface\squareWhite.png" />
+    <Content Include="Assets\Sprites\UserInterface\squareYellow.png" />
+    <Content Include="Assets\Sprites\UserInterface\square_shadow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
